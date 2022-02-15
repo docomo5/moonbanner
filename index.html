@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 배너t</title>
+    <style>
+        .bg {
+            display: flex;
+           
+             width: 1500px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .bg>img {
+            
+            width: 1500px;
+            z-index: 1;
+        }
+
+        .staract >img {
+            top: 120px;
+            left: 30px;
+            position: absolute;
+            z-index: 2;
+            animation:staract 10s ease-in-out ;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes staract {
+            
+            0%{
+                transform: translate(-500px,-500px);
+            }
+            20%{
+                opacity: 1;
+              
+            }
+            40%{
+                opacity: 0;
+                transform: translate(200px,200px);
+            }
+            100%{
+                opacity: 0;
+                transform: translate(200px,200px);
+            }
+        }
+
+
+
+        .star > img {
+            top: 200px;
+            left: 310px;
+            width: 800px;
+            position: absolute;
+            z-index: 3;
+            animation: star 3s infinite ease-in-out;
+        }
+
+        .star > img:nth-child(1) {
+            top: 200px;
+            left: 310px;
+            width: 1000px;
+            position: absolute;
+            z-index: 3;
+            animation-delay: 1s;
+        }
+
+        .star > img:nth-child(2) {
+            top: 270px;
+            left: 340px;
+            width: 800px;
+            position: absolute;
+            z-index: 3;
+            animation-delay: 2s;
+        }
+
+        @keyframes star {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+
+        .text >img:nth-child(1) {
+            top: 900px;
+            left:390px;
+
+            width:50%;
+            position: absolute;
+            z-index: 9;
+            animation: text1 10s infinite;
+        }
+
+        .text >img:nth-child(2) {
+            top: 1100px;
+            left: 370px;
+            width:50%;
+            position: absolute;
+            z-index: 9;
+            animation: text2 10s infinite;
+        }
+
+   
+        @keyframes text1 {
+            0%{
+                opacity: 0;
+                transform: translateX(-1000px);
+            }
+            30% {
+                opacity: 1;
+                transform: translateX(-100px);
+                width: 70%;
+            }
+          
+           33% {
+               width: 50%;
+                transform: translateX(0);
+            }
+            
+        }
+        @keyframes text2 {
+            0%{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            30%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+<img src="./images/배경만.jpg" alt="배경">
+        <div class="staract">
+            <img src="./images/별똥별.png" alt="">
+        </div>
+        <div class="star">
+            <img src="./images/별만많이.png" alt="별">
+            <img src="./images/별만조금.png" alt="별">
+        </div>
+        <div class="text">
+            <img src="./images/정월대보름.png" alt="">
+            <img src="./images/소원을빌어보세요!.png" alt="">
+           
+        </div>
+
+       
+    </div>
+       </body>
+
+</body>
+
+</html>
